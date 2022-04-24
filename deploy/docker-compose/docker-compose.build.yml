@@ -1,0 +1,22 @@
+version: "3"
+services:
+
+  frontend:
+    build:
+      context: ../../src/frontend
+      dockerfile: Dockerfile 
+      args:
+        - NpmRunArg=build-prod      
+    image: frontend  
+    
+  backend:
+    build:  
+      context: ../../src/backend
+      dockerfile: Dockerfile      
+    image: backend
+    
+  reverse-proxy:
+    build:  
+      context: ../../src/reverse-proxy
+      dockerfile: Dockerfile  
+    image: reverse-proxy
