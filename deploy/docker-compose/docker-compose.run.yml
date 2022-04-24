@@ -16,7 +16,7 @@ services:
   reverse-proxy:
     image: ${IMAGE_REPOSITORY}reverse-proxy:${TAG} 
     ports:
-      - ${REVERSE-PROXY_PORT}:80
+      - ${REVERSE_PROXY_PORT}:80
     networks:
       - docker-compose_default      
       
